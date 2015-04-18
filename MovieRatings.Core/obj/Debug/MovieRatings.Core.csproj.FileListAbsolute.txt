@@ -7,3 +7,13 @@ C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.xml
 C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.SqlServer.xml
 C:\websites\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.dll
 C:\websites\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.pdb
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.dll.config
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.dll
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.pdb
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.dll
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.xml
+C:\git\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\git\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.csprojResolveAssemblyReference.cache
+C:\git\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.dll
+C:\git\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.pdb

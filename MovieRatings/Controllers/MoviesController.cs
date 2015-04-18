@@ -11,11 +11,11 @@ namespace MovieRatings.Web.Controllers
 {
     public class MoviesController : ApiController
     {
-        MoviesComponent _component;
+        FakeMoviesRepo _component;
         
         public MoviesController()
         {
-            _component = new MoviesComponent();
+            _component = new FakeMoviesRepo();
         }
 
         [HttpGet]
