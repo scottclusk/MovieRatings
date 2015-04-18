@@ -1,0 +1,9 @@
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.dll.config
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.dll
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\MovieRatings.Core.pdb
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.dll
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.xml
+C:\websites\MovieRatings\MovieRatings.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\websites\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.dll
+C:\websites\MovieRatings\MovieRatings.Core\obj\Debug\MovieRatings.Core.pdb

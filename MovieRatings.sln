@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRatings.Web", "MovieRatings\MovieRatings.Web.csproj", "{34F512B4-571B-478D-A131-42F56B0E1F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRatings.DAL", "MovieRatings.DAL\MovieRatings.DAL.csproj", "{BAEF73CC-A091-4742-BEE0-92CF2CEDB172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRatings.Core", "MovieRatings.Core\MovieRatings.Core.csproj", "{6878FD92-2D74-43F7-81A6-4EE5E2432B09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34F512B4-571B-478D-A131-42F56B0E1F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F512B4-571B-478D-A131-42F56B0E1F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F512B4-571B-478D-A131-42F56B0E1F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F512B4-571B-478D-A131-42F56B0E1F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEF73CC-A091-4742-BEE0-92CF2CEDB172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEF73CC-A091-4742-BEE0-92CF2CEDB172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEF73CC-A091-4742-BEE0-92CF2CEDB172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEF73CC-A091-4742-BEE0-92CF2CEDB172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6878FD92-2D74-43F7-81A6-4EE5E2432B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6878FD92-2D74-43F7-81A6-4EE5E2432B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6878FD92-2D74-43F7-81A6-4EE5E2432B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6878FD92-2D74-43F7-81A6-4EE5E2432B09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

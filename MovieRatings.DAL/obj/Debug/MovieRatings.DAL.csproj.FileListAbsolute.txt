@@ -1,0 +1,12 @@
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.dll
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.pdb
+C:\websites\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.csprojResolveAssemblyReference.cache
+C:\websites\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.dll
+C:\websites\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.pdb
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.dll.config
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\EntityFramework.dll
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\EntityFramework.xml
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\MovieRatings.Core.dll
+C:\websites\MovieRatings\MovieRatings.DAL\bin\Debug\MovieRatings.Core.pdb

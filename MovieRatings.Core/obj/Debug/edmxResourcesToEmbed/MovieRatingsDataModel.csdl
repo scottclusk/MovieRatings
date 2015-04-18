@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MovieRatings.DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cast">
+    <Key>
+      <PropertyRef Name="MovieId" />
+      <PropertyRef Name="ActorName" />
+    </Key>
+    <Property Name="MovieId" Type="Int32" Nullable="false" />
+    <Property Name="ActorName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Movie" Relationship="Self.FK_Cast_ToMovies" FromRole="Cast" ToRole="Movies" />
+  </EntityType>
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RunningMinutes" Type="Decimal" Precision="3" Scale="0" />
+    <NavigationProperty Name="Casts" Relationship="Self.FK_Cast_ToMovies" FromRole="Movies" ToRole="Cast" />
+    <NavigationProperty Name="Ratings" Relationship="Self.FK_Ratings_ToMovies" FromRole="Movies" ToRole="Ratings" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MovieId" Type="Int32" Nullable="false" />
+    <Property Name="Rating1" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Movie" Relationship="Self.FK_Ratings_ToMovies" FromRole="Ratings" ToRole="Movies" />
+  </EntityType>
+  <Association Name="FK_Cast_ToMovies">
+    <End Role="Movies" Type="MovieRatings.DataModel.Movie" Multiplicity="1" />
+    <End Role="Cast" Type="Self.Cast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cast">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ratings_ToMovies">
+    <End Role="Movies" Type="MovieRatings.DataModel.Movie" Multiplicity="1" />
+    <End Role="Ratings" Type="Self.Rating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ratings">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MovieRatingsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Casts" EntityType="Self.Cast" />
+    <EntitySet Name="Movies1" EntityType="MovieRatings.DataModel.Movie" />
+    <EntitySet Name="Ratings" EntityType="Self.Rating" />
+    <AssociationSet Name="FK_Cast_ToMovies" Association="Self.FK_Cast_ToMovies">
+      <End Role="Movies" EntitySet="Movies1" />
+      <End Role="Cast" EntitySet="Casts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ratings_ToMovies" Association="Self.FK_Ratings_ToMovies">
+      <End Role="Movies" EntitySet="Movies1" />
+      <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
