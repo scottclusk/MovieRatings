@@ -18,7 +18,7 @@ namespace MovieRatings.DAL
 
         public List<Movie> GetMovies()
         {
-            return _db.Movies.ToList();
+            return _db.Movies1.ToList();
         }
 
         public bool AddMovie(Movie movie)
@@ -26,7 +26,7 @@ namespace MovieRatings.DAL
             var success = true;
             try
             {
-                _db.Movies.Add(movie);
+                _db.Movies1.Add(movie);
                 _db.SaveChanges();
             }
             catch (Exception)

@@ -2,16 +2,16 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MovieRatingsDataModelStoreContainer" CdmEntityContainer="MovieRatingsEntities">
     <EntitySetMapping Name="Casts">
-      <EntityTypeMapping TypeName="MovieRatings.DataModel.Cast">
-        <MappingFragment StoreEntitySet="Cast">
+      <EntityTypeMapping TypeName="IsTypeOf(MovieRatings.DataModel.Cast)">
+        <MappingFragment StoreEntitySet="Casts">
           <ScalarProperty Name="MovieId" ColumnName="MovieId" />
           <ScalarProperty Name="ActorName" ColumnName="ActorName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Movies1">
-      <EntityTypeMapping TypeName="MovieRatings.DataModel.Movie">
-        <MappingFragment StoreEntitySet="Movies">
+      <EntityTypeMapping TypeName="IsTypeOf(MovieRatings.DataModel.Movie)">
+        <MappingFragment StoreEntitySet="Movies1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Year" ColumnName="Year" />
@@ -20,11 +20,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Ratings">
-      <EntityTypeMapping TypeName="MovieRatings.DataModel.Rating">
+      <EntityTypeMapping TypeName="IsTypeOf(MovieRatings.DataModel.Rating)">
         <MappingFragment StoreEntitySet="Ratings">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="MovieId" ColumnName="MovieId" />
-          <ScalarProperty Name="Rating1" ColumnName="Rating" />
+          <ScalarProperty Name="Rating1" ColumnName="Rating1" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

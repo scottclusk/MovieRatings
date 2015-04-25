@@ -22,3 +22,15 @@ C:\git\MovieRatings\MovieRatings.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\git\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.csprojResolveAssemblyReference.cache
 C:\git\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.dll
 C:\git\MovieRatings\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.pdb
+C:\git\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.csprojResolveAssemblyReference.cache
+C:\git\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.dll
+C:\git\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.dll.config
+C:\git\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.dll
+C:\git\MovieRatings.DAL\bin\Debug\MovieRatings.DAL.pdb
+C:\git\MovieRatings.DAL\bin\Debug\EntityFramework.dll
+C:\git\MovieRatings.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\git\MovieRatings.DAL\bin\Debug\MovieRatings.Core.dll
+C:\git\MovieRatings.DAL\bin\Debug\MovieRatings.Core.pdb
+C:\git\MovieRatings.DAL\bin\Debug\EntityFramework.xml
+C:\git\MovieRatings.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\git\MovieRatings.DAL\obj\Debug\MovieRatings.DAL.pdb

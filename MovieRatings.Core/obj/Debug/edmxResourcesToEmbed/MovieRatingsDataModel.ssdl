@@ -1,33 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="MovieRatings.DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Cast">
+<Schema Namespace="MovieRatings.DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MovieRatingsDataModelStoreContainer">
+    <EntitySet Name="Casts" EntityType="MovieRatings.DataModel.Store.Casts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Movies1" EntityType="MovieRatings.DataModel.Store.Movies1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ratings" EntityType="MovieRatings.DataModel.Store.Ratings" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Cast_ToMovies" Association="MovieRatings.DataModel.Store.FK_Cast_ToMovies">
+      <End Role="Movies" EntitySet="Movies1" />
+      <End Role="Cast" EntitySet="Casts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ratings_ToMovies" Association="MovieRatings.DataModel.Store.FK_Ratings_ToMovies">
+      <End Role="Movies" EntitySet="Movies1" />
+      <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Casts">
     <Key>
       <PropertyRef Name="MovieId" />
       <PropertyRef Name="ActorName" />
     </Key>
     <Property Name="MovieId" Type="int" Nullable="false" />
-    <Property Name="ActorName" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="ActorName" Type="nchar" Nullable="false" MaxLength="30" />
   </EntityType>
-  <EntityType Name="Movies">
+  <EntityType Name="Movies1">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="nchar" MaxLength="50" />
-    <Property Name="Year" Type="nchar" MaxLength="10" />
-    <Property Name="RunningMinutes" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nchar" Nullable="true" MaxLength="50" />
+    <Property Name="Year" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="RunningMinutes" Type="decimal" Nullable="true" Precision="3" Scale="0" />
   </EntityType>
   <EntityType Name="Ratings">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MovieId" Type="int" Nullable="false" />
-    <Property Name="Rating" Type="int" Nullable="false" />
+    <Property Name="Rating1" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Cast_ToMovies">
-    <End Role="Movies" Type="Self.Movies" Multiplicity="1" />
-    <End Role="Cast" Type="Self.Cast" Multiplicity="*" />
+    <End Role="Movies" Type="MovieRatings.DataModel.Store.Movies1" Multiplicity="1" />
+    <End Role="Cast" Type="MovieRatings.DataModel.Store.Casts" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Movies">
         <PropertyRef Name="Id" />
@@ -38,8 +51,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Ratings_ToMovies">
-    <End Role="Movies" Type="Self.Movies" Multiplicity="1" />
-    <End Role="Ratings" Type="Self.Ratings" Multiplicity="*" />
+    <End Role="Movies" Type="MovieRatings.DataModel.Store.Movies1" Multiplicity="1" />
+    <End Role="Ratings" Type="MovieRatings.DataModel.Store.Ratings" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Movies">
         <PropertyRef Name="Id" />
@@ -49,17 +62,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="MovieRatingsDataModelStoreContainer">
-    <EntitySet Name="Cast" EntityType="Self.Cast" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Ratings" EntityType="Self.Ratings" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Cast_ToMovies" Association="Self.FK_Cast_ToMovies">
-      <End Role="Movies" EntitySet="Movies" />
-      <End Role="Cast" EntitySet="Cast" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Ratings_ToMovies" Association="Self.FK_Ratings_ToMovies">
-      <End Role="Movies" EntitySet="Movies" />
-      <End Role="Ratings" EntitySet="Ratings" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

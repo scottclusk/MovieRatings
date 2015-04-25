@@ -26,7 +26,7 @@ namespace MovieRatings.Core
         }
     
         public virtual DbSet<Cast> Casts { get; set; }
-        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Movie> Movies1 { get; set; }
         public virtual DbSet<Rating> Ratings { get; set; }
     }
 }
