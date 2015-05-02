@@ -5,15 +5,13 @@
         .module('app')
         .controller('home', Home);
     
-    Home.$inject = ['$http']
-    function Home($http) {
+    Home.$inject = ['dataService'];
+
+    function Home(dataService) {
         var vm = this;
         vm.title = "Movies";
         vm.movies = [];
-        vm.addMovie = addMovie;
-        vm.movieTitle = "";
-        vm.movieYear;
-        vm.runningMinutes;
+        vm.getMovies = getMovies;
 
         activate();
 
@@ -22,31 +20,12 @@
         }
 
         function getMovies() {
-            $http({
-                method: "GET",
-                url: "/api/movies/getmovies"
-            }).success(function (data) {
-                vm.movies = data;
-            }).error(function (error) {
-            });
-        }
-
-        function addMovie() {
-            var movie = {
-                Title: vm.movieTitle,
-                Year: vm.movieYear,
-                RunningMinutes: vm.runningMinutes
-            };
-
-            $http.post("/api/movies/addmovie", movie)
-                .success(function(){
-                    
+            var movies = dataService.getMovies()
+                .then(function (result) {
+                    vm.movies = result.data;
+                }, function (error) {
+                    console.log(error);
                 });
         }
-        //{
-        //Title: "Test",
-        //Year: 1999,
-        //RunningMinutes: 150
-        //}
     }
 })();

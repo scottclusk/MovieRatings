@@ -196,7 +196,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Core\dataService.js" />
     <Content Include="App\Core\routes.js" />
+    <Content Include="App\Home\AddMovie.html" />
+    <Content Include="App\Home\AddMovie.js" />
     <Content Include="App\Home\home.html" />
     <Content Include="App\Home\home.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
