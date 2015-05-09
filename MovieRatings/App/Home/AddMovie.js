@@ -10,14 +10,17 @@
             templateUrl: 'app/home/addmovie.html',
             controller: AddMovieController,
             controllerAs: 'vm',
-            bindController: true
+            scope: {
+                callback: "&"
+            },
+            bindToController: true
         };
 
-        AddMovieController.$inject = ['dataService'];
+        AddMovieController.$inject = ['dataService','$scope'];
 
         return directive;
 
-        function AddMovieController(dataService) {
+        function AddMovieController(dataService,$scope) {
             var vm = this;
 
             vm.movieTitle = "";
@@ -31,14 +34,12 @@
                     Year: vm.movieYear,
                     RunningMinutes: vm.runningMinutes
                 }).then(function (data) {
-
                     //clear out textboxes
-                    $parent.getMovies();
+                    vm.callback();
                 }, function (error) {
 
                 });
             }
-
         };
     }
 })();

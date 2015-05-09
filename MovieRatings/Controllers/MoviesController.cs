@@ -1,5 +1,6 @@
 ﻿using MovieRatings.Core;
 using MovieRatings.DAL;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,17 @@ namespace MovieRatings.Web.Controllers
         }
 
         [HttpGet]
-        public List<Movie> GetMovies()
+        public HttpResponseMessage GetMovies()
         {
-            return _component.GetMovies();
+            var movies = _component.GetMovies();
+            var result = JsonConvert.SerializeObject(movies, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
+            return new HttpResponseMessage() {
+                Content= new StringContent(result)
+            };
         }
 
         [HttpPost]
