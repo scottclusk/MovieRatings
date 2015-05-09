@@ -1,6 +1,6 @@
 ﻿<div>{{home.title}}</div>
 <div>
-    <div ng-repeat="movie in home.movies">
+    <div ng-click="home.deleteMovie(movie)" ng-repeat="movie in home.movies">
         {{movie.Title}} - {{movie.Year}} - {{movie.RunningMinutes}}
     </div>
     <add-movie callback="home.getMovies()"></add-movie>

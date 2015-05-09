@@ -8,7 +8,8 @@
     function dataService($http) {
         var service = {
             getMovies: getMovies,
-            addMovie: addMovie
+            addMovie: addMovie,
+            deleteMovie: deleteMovie
         };
 
         return service;
@@ -23,6 +24,10 @@
         function addMovie(movie) {
             return $http.post("/api/movies/addmovie", movie);
         }
+
+        function deleteMovie(movie) {
+            return $http.post("/api/movies/deleteMovie", movie);
+        }   
 
         //var movie = {
         //    Title: vm.movieTitle,

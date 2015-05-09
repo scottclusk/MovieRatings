@@ -48,5 +48,21 @@ namespace MovieRatings.Web.Controllers
             }
             return response;
         }
+
+        [HttpPost]
+        public HttpResponseMessage DeleteMovie(Movie movie)
+        {
+            var response = new HttpResponseMessage();
+            var saved = _component.DeleteMovie(movie.Id);
+            if (saved)
+            {
+                response.StatusCode = HttpStatusCode.OK;
+            }
+            else
+            {
+                response.StatusCode = HttpStatusCode.InternalServerError;
+            }
+            return response;
+        }
     }
 }

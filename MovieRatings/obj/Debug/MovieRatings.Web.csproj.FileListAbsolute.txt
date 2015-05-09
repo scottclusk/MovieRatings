@@ -268,3 +268,9 @@ C:\git\MovieRatings\bin\zh-Hant\System.Spatial.resources.dll
 C:\git\MovieRatings\obj\Debug\MovieRatings.Web.csprojResolveAssemblyReference.cache
 C:\git\MovieRatings\obj\Debug\MovieRatings.dll
 C:\git\MovieRatings\obj\Debug\MovieRatings.pdb
+C:\git\MovieRatings\MovieRatings\bin\System.Net.Http.Formatting.dll
+C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.dll
+C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.WebHost.dll
+C:\git\MovieRatings\MovieRatings\bin\System.Net.Http.Formatting.xml
+C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.xml
+C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.WebHost.xml

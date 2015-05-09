@@ -35,5 +35,20 @@ namespace MovieRatings.DAL
             }
             return success;   
         }
+
+        public bool DeleteMovie(int id)
+        {
+            var success = true;
+            try
+            {
+                _db.Movies1.Remove(_db.Movies1.First(x => x.Id == id));
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+            return success;
+        }
     }
 }

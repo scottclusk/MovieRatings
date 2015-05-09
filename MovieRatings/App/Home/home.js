@@ -12,6 +12,7 @@
         vm.title = "Movies";
         vm.movies = [];
         vm.getMovies = getMovies;
+        vm.deleteMovie = deleteMovie;
 
         activate();
 
@@ -23,6 +24,16 @@
             var movies = dataService.getMovies()
                 .then(function (result) {
                     vm.movies = result.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+
+        function deleteMovie(movie) {
+            var movies = dataService.deleteMovie(movie)
+
+                .then(function (result) {
+                    getMovies();
                 }, function (error) {
                     console.log(error);
                 });

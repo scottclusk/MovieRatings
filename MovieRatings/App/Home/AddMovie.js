@@ -16,11 +16,11 @@
             bindToController: true
         };
 
-        AddMovieController.$inject = ['dataService','$scope'];
+        AddMovieController.$inject = ['dataService'];
 
         return directive;
 
-        function AddMovieController(dataService,$scope) {
+        function AddMovieController(dataService) {
             var vm = this;
 
             vm.movieTitle = "";
