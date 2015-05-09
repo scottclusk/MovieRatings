@@ -110,12 +110,9 @@ C:\git\MovieRatings\MovieRatings\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\git\MovieRatings\MovieRatings\bin\MovieRatings.Core.dll
 C:\git\MovieRatings\MovieRatings\bin\MovieRatings.DAL.dll
 C:\git\MovieRatings\MovieRatings\bin\Newtonsoft.Json.dll
-C:\git\MovieRatings\MovieRatings\bin\System.Net.Http.Formatting.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Spatial.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Helpers.dll
-C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.OData.dll
-C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.WebHost.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Mvc.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Optimization.dll
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Razor.dll
@@ -130,10 +127,7 @@ C:\git\MovieRatings\MovieRatings\bin\MovieRatings.DAL.pdb
 C:\git\MovieRatings\MovieRatings\bin\EntityFramework.xml
 C:\git\MovieRatings\MovieRatings\bin\EntityFramework.SqlServer.xml
 C:\git\MovieRatings\MovieRatings\bin\Newtonsoft.Json.xml
-C:\git\MovieRatings\MovieRatings\bin\System.Net.Http.Formatting.xml
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Helpers.xml
-C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.xml
-C:\git\MovieRatings\MovieRatings\bin\System.Web.Http.WebHost.xml
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Mvc.xml
 C:\git\MovieRatings\MovieRatings\bin\System.Web.Razor.xml
 C:\git\MovieRatings\MovieRatings\bin\System.Web.WebPages.xml
