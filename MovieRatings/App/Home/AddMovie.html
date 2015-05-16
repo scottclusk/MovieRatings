@@ -1,6 +1,9 @@
-﻿<div>
-    <input type="text" ng-model="vm.movieTitle" />
-    <input type="text" ng-model="vm.movieYear"  />
-    <input type="text" ng-model="vm.runningMinutes" />
-    <input type="button" ng-click="vm.addMovie()" />
+﻿<div class="form-group">
+    Title<input class="form-control" type="text" ng-model="vm.movieTitle" />
+    Year<input class="form-control" type="text" ng-model="vm.movieYear" />
+    Minutes<input class="form-control" type="text" ng-model="vm.runningMinutes" />
+    <div ng-repeat="cast in vm.casts">
+        <input ng-model="cast.ActorName" class="form-control" type="text" />
+    </div>
+    Add<input class="btn btn-default" type="button" ng-click="vm.addMovie()" value="Add" />
 </div>

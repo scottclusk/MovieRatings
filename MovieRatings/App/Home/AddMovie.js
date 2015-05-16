@@ -27,12 +27,14 @@
             vm.movieYear;
             vm.runningMinutes;
             vm.addMovie = addMovie;
-
+            vm.casts = [{ActorName:""}];
+            
             function addMovie() {
                 dataService.addMovie({
                     Title: vm.movieTitle,
                     Year: vm.movieYear,
-                    RunningMinutes: vm.runningMinutes
+                    RunningMinutes: vm.runningMinutes,
+                    Casts: vm.casts
                 }).then(function (data) {
                     //clear out textboxes
                     vm.callback();
