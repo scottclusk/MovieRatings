@@ -41,6 +41,8 @@ namespace MovieRatings.DAL
             var success = true;
             try
             {
+                _db.Casts.Where(x => x.MovieId == id).ToList().ForEach(item => _db.Casts.Remove(item));
+                _db.Ratings.Where(x => x.MovieId == id).ToList().ForEach(item => _db.Ratings.Remove(item));
                 _db.Movies1.Remove(_db.Movies1.First(x => x.Id == id));
                 _db.SaveChanges();
             }
