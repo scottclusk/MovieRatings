@@ -21,7 +21,7 @@
         }
 
         function getMovies() {
-            var movies = dataService.getMovies()
+            dataService.getMovies()
                 .then(function (result) {
                     vm.movies = result.data;
                 }, function (error) {

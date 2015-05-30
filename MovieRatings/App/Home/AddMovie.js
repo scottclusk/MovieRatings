@@ -27,7 +27,8 @@
             vm.movieYear;
             vm.runningMinutes;
             vm.addMovie = addMovie;
-            vm.casts = [{ActorName:""}];
+            vm.addActor = addActor;
+            vm.casts = [{ ActorName: "" }];
             
             function addMovie() {
                 dataService.addMovie({
@@ -37,10 +38,17 @@
                     Casts: vm.casts
                 }).then(function (data) {
                     //clear out textboxes
+                    vm.movieTitle = "";
+                    vm.movieYear = "";
+                    vm.casts = [{ ActorName: "" }];
                     vm.callback();
                 }, function (error) {
 
                 });
+            }
+
+            function addActor (){
+                vm.casts.push({ ActorName: "" });
             }
         };
     }

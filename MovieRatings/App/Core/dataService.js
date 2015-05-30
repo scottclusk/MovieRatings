@@ -26,7 +26,7 @@
         }
 
         function deleteMovie(movie) {
-            return $http.post("/api/movies/deleteMovie", movie);
+            return $http.post("/api/movies/deleteMovie", movie );
         }   
 
         //var movie = {
