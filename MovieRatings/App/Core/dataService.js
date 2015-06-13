@@ -9,7 +9,8 @@
         var service = {
             getMovies: getMovies,
             addMovie: addMovie,
-            deleteMovie: deleteMovie
+            deleteMovie: deleteMovie,
+            addRating: addRating
         };
 
         return service;
@@ -29,11 +30,9 @@
             return $http.post("/api/movies/deleteMovie", movie );
         }   
 
-        //var movie = {
-        //    Title: vm.movieTitle,
-        //    Year: vm.movieYear,
-        //    RunningMinutes: vm.runningMinutes
-        //};
+        function addRating(rating) {
+            return $http.post("/api/movies/AddRating", rating);
+        }
     }
 })();
 

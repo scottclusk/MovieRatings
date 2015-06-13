@@ -9,6 +9,7 @@
                 <th>Year</th>
                 <th>Length</th>
                 <th>Casts</th>
+                <th>Rating</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,9 @@
                 <td>
                     <div ng-repeat="cast in movie.Casts">{{cast.ActorName}}</div>
                     
+                </td>
+                <td>
+                    <span ng-repeat="value in home.ratingNumbers" class="glyphicon glyphicon-star-empty"></span>
                 </td>
             </tr>
         </tbody>

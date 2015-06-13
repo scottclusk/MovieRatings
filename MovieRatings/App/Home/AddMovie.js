@@ -40,6 +40,7 @@
                     //clear out textboxes
                     vm.movieTitle = "";
                     vm.movieYear = "";
+                    vm.runningMinutes = "";
                     vm.casts = [{ ActorName: "" }];
                     vm.callback();
                 }, function (error) {

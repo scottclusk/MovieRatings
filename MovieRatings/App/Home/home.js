@@ -13,6 +13,8 @@
         vm.movies = [];
         vm.getMovies = getMovies;
         vm.deleteMovie = deleteMovie;
+        vm.addRating = addRating;
+        vm.ratingNumbers = [1, 2, 3, 4, 5];
 
         activate();
 
@@ -30,9 +32,18 @@
         }
 
         function deleteMovie(movie) {
-            var movies = dataService.deleteMovie(movie)
+            dataService.deleteMovie(movie)
 
                 .then(function (result) {
+                    getMovies();
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+
+        function addRating(movieId, rating) {
+            dataService.addRating({ MovieId: movieId, Rating1: rating })
+                .then(function () {
                     getMovies();
                 }, function (error) {
                     console.log(error);
