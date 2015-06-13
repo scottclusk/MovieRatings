@@ -64,5 +64,17 @@ namespace MovieRatings.Web.Controllers
             }
             return response;
         }
+
+        [HttpPost]
+        public HttpResponseMessage AddRating(Rating rating)
+        {
+            var response = new HttpResponseMessage();
+            var saved = _component.AddRating(rating);
+            if (saved)
+                response.StatusCode = HttpStatusCode.OK;
+            else
+                response.StatusCode = HttpStatusCode.InternalServerError;
+            return response;
+        }
     }
 }

@@ -52,5 +52,20 @@ namespace MovieRatings.DAL
             }
             return success;
         }
+
+        public bool AddRating(Rating rating)
+        {
+            var success = true;
+            try
+            {
+                _db.Ratings.Add(rating);
+                _db.SaveChanges();
+            }
+            catch
+            {
+                success = false;
+            }
+            return success;
+        }
     }
 }
